@@ -4,6 +4,6 @@
 
 n=""
 read -p "Upisi broj minuta: " n
-files=$(find /home/jelence/* -type f -and -newermt $(date -d "$date -$n minutes" +%T) | cat)
+files=$(find /home/$USERNAME/* -type f -and -newermt $(date -d "$date -$n minutes" +%T) | cat)
 echo $files
 zip backup.tgz $files
