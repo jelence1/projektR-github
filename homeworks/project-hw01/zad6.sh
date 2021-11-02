@@ -4,6 +4,5 @@
 
 n=""
 read -p "Upisi broj bajtova: " n
-n=n+"c"
 files=$(find /home/$(echo $USERNAME)/* -type f -size +${n}c)
 zip backup.tgz $files
